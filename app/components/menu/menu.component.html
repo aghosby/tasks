@@ -1,0 +1,62 @@
+<div class="menu-wrap" [ngClass]="status ? 'half' : 'full' ">
+    <div class="menu-trigger flex-std">
+        <div class="col flex-std">
+            <span [ngStyle]="{'color':'#fff', 'font-size':'22px'}" class="material-icons-round">layers</span>
+            <div class="text">PJ</div>
+        </div>
+        <div class="col" (click)="collapse()">
+            <span class="material-icons-round">keyboard_backspace</span>
+        </div>
+    </div>
+
+    <div class="menu-items">
+        <div class="row flex-std" (click)="passTitle('Dashboard')" [class.active]="val === 'Dashboard'">
+            <span class="material-icons-round">dashboard</span>
+            <span>Dashboard</span>
+        </div>
+        <div class="row flex-std" (click)="passTitle('Analytics')" [class.active]="val === 'Analytics'">
+            <span class="material-icons-round">equalizer</span>
+            <span>Analytics</span>
+        </div>
+        <div class="row flex-std" (click)="passTitle('Projects')" [class.active]="val === 'Projects'">
+            <span class="material-icons-round">folder</span>
+            <span>Projects</span>
+        </div>
+        <div class="row flex-std" (click)="passTitle('Tracking')" [class.active]="val === 'Tracking'">
+            <span class="material-icons-round">timer</span>
+            <span>Tracking</span>
+        </div>
+        <div class="row flex-std" (click)="passTitle('History')" [class.active]="val === 'History'">
+            <span class="material-icons-round">restore</span>
+            <span>History</span>
+        </div>
+        <div class="row flex-std" (click)="passTitle('Settings')" [class.active]="val === 'Settings'">
+            <span class="material-icons-round">settings</span>
+            <span>Settings</span>
+        </div>
+    </div>
+
+    <div class="new-task-hld flex-std">
+        <div class="new">Create new task</div>
+        <span [ngStyle]="{'color':'#4169E1', 'font-size':'38px'}" class="material-icons-round">add_circle</span>
+    </div>
+
+
+    <div class="profile-hld flex-std">
+        <div class="col flex-std">
+            <div class="image">
+                <img src="../../../assets/img/avatar1.png" />
+            </div>
+            <div class="details">
+                <div class="name">Finna A</div>
+                <div class="email">finna@ikgs.com</div>
+            </div>
+        </div>
+        <div class="col">
+            <span [ngStyle]="{'color':'#aaa', 'font-size':'18px'}" class="material-icons-round">expand_less</span>
+        </div>
+
+    </div>
+
+
+</div>
